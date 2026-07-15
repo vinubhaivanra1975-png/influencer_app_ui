@@ -86,22 +86,141 @@ class Home extends StatelessWidget {
                       const SizedBox(height: 20,),
                       Container(
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [Colors.purple,Colors.pink,Colors.deepPurple]),
+                          gradient:
+                          LinearGradient(
+                            begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                    Colors.pink,Colors.deepPurple
+                          ]),
                           borderRadius: BorderRadius.circular(24)
                         ),
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              disabledBackgroundColor: Colors.transparent,
                               backgroundColor: Colors.transparent,
                               foregroundColor: Colors.transparent,
+                              elevation: 0,
+                              shadowColor: Colors.transparent,
+                              shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent),borderRadius: BorderRadius.circular(24)),
                             ) ,                         onPressed: (){}, child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [Text('Follow me',style: TextStyle(color:Colors.white),),Icon(Icons.arrow_right,size: 20,color: Colors.white,),],)),
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
+            //category section and its pills
+              Align(
+                 alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text('Category',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,),),
+                  )),
+              //first 2 pills
+              Row(children: [
+                const SizedBox(width: 20,),
+                //first pill
+                Container(
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                child: Row(children: [
+                  Icon(Icons.videocam_rounded,color: Colors.pink.shade400,size: 25,),
+                  Text('Video Editing',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                ],),
+              ),
+                const SizedBox(width: 20,),
+                //second pil
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.mode_edit_outline_outlined,color: Colors.purple.shade400,size: 25,),
+                    Text('Thumbnail design',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+              ],),
+              const SizedBox(height:23 ,),
+              //second 2 pills
+              Row(children: [
+                const SizedBox(width: 20,),
+                //first pill
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.public,color: Colors.pink.shade400,size: 25,),
+                    Text('Content Strategy',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+                const SizedBox(width: 20,),
+                //second pil
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.volume_up_rounded,color: Colors.purple.shade400,size: 25,),
+                    Text('Public Speaking',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+              ],),
+const SizedBox(height: 20,),
+              //service section
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text('Services',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,),),
+                  )),
+              //first 2 pills
+              Row(children: [
+                const SizedBox(width: 20,),
+                //first pill
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.videocam_rounded,color: Colors.pink.shade400,size: 25,),
+                    Text('Birthday Wishes',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+                const SizedBox(width: 20,),
+                //second pil
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.mode_edit_outline_outlined,color: Colors.purple.shade400,size: 25,),
+                    Text('Instagram Post',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+              ],),
+              const SizedBox(height:23 ,),
+              //second 2 pills
+              Row(children: [
+                const SizedBox(width: 20,),
+                //first pill
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.public,color: Colors.pink.shade400,size: 25,),
+                    Text('Add Highlights',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+                const SizedBox(width: 20,),
+                //second pil
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  decoration: BoxDecoration(color: Colors.grey.shade300,borderRadius: BorderRadius.circular(24)),
+                  child: Row(children: [
+                    Icon(Icons.volume_up_rounded,color: Colors.purple.shade400,size: 25,),
+                    Text('Promotional Video',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                  ],),
+                ),
+              ],)
+
+
             ],
           ),
         )),
